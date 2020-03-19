@@ -20,7 +20,7 @@ use Illuminate\Notifications\Notifiable;
  * @method static Builder|User query()
  * @mixin Eloquent
  */
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
