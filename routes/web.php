@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify' => true, 'register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');;
+
+
+
+Auth::routes(['verify' => true, 'register' => true]);
+Route::group([
+    'prefix' => 'admin',
+    'middleware' => ['auth', 'admin'],
+    'namespace' => 'Admin',
+    'as' => 'admin.'
+], function () {
+
+    Route::get('/', 'DashboardController@index')->name('dashboard');
+});
