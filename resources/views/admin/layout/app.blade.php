@@ -8,8 +8,8 @@
     <meta name="generator" content="Jekyll v3.8.6">
     <title>Dashboard Template · Bootstrap</title>
     <meta name="theme-color" content="#563d7c">
-
     @include('admin.layout.partial.style')
+    @yield('styles')
 </head>
 <body>
 @include('admin.layout.partial.topNav')
@@ -22,5 +22,7 @@
         @include('admin.layout.partial.javascript')
     </div>
 </div>
+
+@yield('scripts')
 </body>
 </html>
