@@ -12,9 +12,15 @@
     @include('admin.layout.partial.style')
 </head>
 <body>
-@yield('content')
+@include('admin.layout.partial.topNav')
 
-@include('admin.layout.partial.javascript')
+<div class="container-fluid">
+    <div class="row">
+        @include('admin.layout.partial.leftNav')
+        @yield('content')
 
+        @include('admin.layout.partial.javascript')
+    </div>
+</div>
 </body>
 </html>
