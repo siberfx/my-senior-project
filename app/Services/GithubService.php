@@ -21,7 +21,7 @@ class GithubService
         $this->branch = config('github.repository.branch');
     }
 
-    public function github()
+    public function getCommits()
     {
 
 //        return GitHub::api('repo')->activity('siberfx', 'siberfx.com');
